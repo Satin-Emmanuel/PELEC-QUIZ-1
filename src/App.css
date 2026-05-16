@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+}
+
+/* Container Animation */
+.container {
+  max-width: 700px;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 30px;
+  animation: bounce 2s infinite;
+}
+
+/* User Card */
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+
+  animation: slideUp 0.7s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* User Name */
+.card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.card p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
